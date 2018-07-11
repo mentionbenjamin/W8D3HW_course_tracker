@@ -15,6 +15,14 @@ public class Student {
         this.enrollmentNumber = enrollmentNumber;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
+    public void setId(){
+        this.id = id;
+    }
+
     public String getName(){
         return this.name;
     }
