@@ -24,7 +24,7 @@ public class Runner {
         Student student2 = new Student("Ben", 24, 23, course);
         DBHelper.save(student2);
 
-        Mentor mentor = new Mentor("Zsolt");
+        Mentor mentor = new Mentor("Zsolt", student1);
         DBHelper.save(mentor);
 
 

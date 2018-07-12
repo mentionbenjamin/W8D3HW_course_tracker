@@ -8,11 +8,13 @@ public class Mentor {
 
     private int id;
     private String name;
+    private Student student;
 
     public Mentor(){}
 
-    public Mentor(String name){
+    public Mentor(String name, Student student){
         this.name = name;
+        this.student = student;
     }
 
     @Id
@@ -34,4 +36,13 @@ public class Mentor {
         this.name = name;
     }
 
+
+    @OneToOne
+    @JoinColumn(name = "student_id", nullable = false)
+    public Student getStudent() {
+        return student;
+    }
+    public void setStudent(Student student){
+        this.student = student;
+    }
 }
