@@ -31,6 +31,7 @@ public class Runner {
 
 
         List<Student> students = DBHelper.getAll(Student.class);
+        List<Instructor> instructors = DBHelper.getAll(Instructor.class);
 
 
         System.exit(0);
