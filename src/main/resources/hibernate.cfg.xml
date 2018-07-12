@@ -10,7 +10,7 @@
 
         <!--CHANGE DB NAME BELOW-->
 
-        <property name="connection.url">jdbc:postgresql://localhost/course_trackerdb</property>
+        <property name="connection.url">jdbc:postgresql://localhost/course_tracker_db</property>
 
         <!--CHANGE DB NAME ABOVE-->
 
