@@ -30,7 +30,7 @@ public class DBHelper {
         }
     }
 
-    protected static <T> List<T> getAll(Class classType) {
+    public static <T> List<T> getAll(Class classType) {
         List<T> results = null;
         session = HibernateUtil.getSessionFactory().openSession();
 

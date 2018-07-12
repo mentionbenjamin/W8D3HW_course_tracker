@@ -9,9 +9,7 @@
         <property name="connection.driver_class">org.postgresql.Driver</property>
 
         <!--CHANGE DB NAME BELOW-->
-
         <property name="connection.url">jdbc:postgresql://localhost/course_tracker_db</property>
-
         <!--CHANGE DB NAME ABOVE-->
 
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
@@ -19,13 +17,11 @@
         <property name="show_sql">true</property>
 
         <!--PUT MAPPING FOR MODELS BELOW HERE-->
-
         <mapping class = "models.Course"/>
         <mapping class = "models.Student"/>
         <mapping class = "models.Mentor"/>
         <mapping class = "models.Lesson"/>
         <mapping class = "models.Instructor"/>
-
         <!--PUT MAPPING FOR MODELS ABOVE HERE-->
 
     </session-factory>

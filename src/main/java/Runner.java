@@ -30,6 +30,9 @@ public class Runner {
         DBHelper.save(mentor);
 
 
+        List<Student> students = DBHelper.getAll(Student.class);
+
+
         System.exit(0);
     }
 }
