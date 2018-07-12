@@ -2,6 +2,7 @@ package models;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "instructors")
@@ -9,13 +10,12 @@ public class Instructor {
 
     private int id;
     private String name;
-    private Lesson lesson;
+    private List<Lesson> lessons;
 
     public Instructor(){}
 
-    public Instructor(String name, Lesson lesson){
+    public Instructor(String name){
         this.name = name;
-        this.lesson = lesson;
     }
 
 
@@ -32,17 +32,18 @@ public class Instructor {
 
     @Column(name = "name")
     public String getName() {
-        return name;
+        return this.name;
     }
     public void setName(String name) {
         this.name = name;
     }
 
 
-    public Lesson getLesson() {
-        return lesson;
+    @OneToMany(mappedBy = "instructor", fetch = FetchType.LAZY)
+    public List<Lesson> getLesson() {
+        return this.lessons;
     }
-    public void setLesson(Lesson lesson) {
-        this.lesson = lesson;
+    public void setLesson(List<Lesson> lessons) {
+        this.lessons = lessons;
     }
 }

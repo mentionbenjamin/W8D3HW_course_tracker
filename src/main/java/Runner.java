@@ -1,9 +1,6 @@
 
 import db.DBHelper;
-import models.Course;
-import models.Lesson;
-import models.Mentor;
-import models.Student;
+import models.*;
 
 import java.util.List;
 
@@ -14,9 +11,14 @@ public class Runner {
         Course course = new Course("Historic Computing", "BComp");
         DBHelper.save(course);
 
-        Lesson lesson1 = new Lesson("Computer Science", 314, course);
+        Instructor instructor1 = new Instructor("John");
+        DBHelper.save(instructor1);
+        Instructor instructor2 = new Instructor("Jarrod");
+        DBHelper.save(instructor2);
+
+        Lesson lesson1 = new Lesson("Computer Science", 314, course, instructor1);
         DBHelper.save(lesson1);
-        Lesson lesson2 = new Lesson("History", 1066, course);
+        Lesson lesson2 = new Lesson("History", 1066, course, instructor1);
         DBHelper.save(lesson2);
 
         Student student1 = new Student("Stuart", 26, 42, course);
@@ -26,7 +28,6 @@ public class Runner {
 
         Mentor mentor = new Mentor("Zsolt", student1);
         DBHelper.save(mentor);
-
 
 
         System.exit(0);
