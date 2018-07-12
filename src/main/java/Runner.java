@@ -33,6 +33,8 @@ public class Runner {
         List<Student> students = DBHelper.getAll(Student.class);
         List<Instructor> instructors = DBHelper.getAll(Instructor.class);
 
+//        Lesson foundLesson = DBHelper.find(Student.class, student2.getId());
+
 
         System.exit(0);
     }
